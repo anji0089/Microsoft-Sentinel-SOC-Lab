@@ -23,3 +23,11 @@ A test file was encoded with `certutil.exe -encode` from PowerShell.
 The test produced the expected process-creation telemetry and matched the detection. A separate Acer service invocation of certutil was identified as likely legitimate software activity and was not treated as malicious.
 
 **Important:** never publish screenshots containing passwords or other secrets from real command lines.
+
+## Analyst Lesson
+
+Certutil is a legitimate Windows utility, so its execution does not automatically indicate malicious activity.
+
+An analyst should review the command-line arguments, parent process, user context, target file, and surrounding events to determine whether the activity is expected.
+
+In this lab, the `certutil.exe -encode` execution was intentionally generated as a controlled detection test and was assessed as benign.
