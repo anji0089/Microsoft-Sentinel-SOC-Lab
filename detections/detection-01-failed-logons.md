@@ -15,7 +15,11 @@ SecurityEvent
 
 ## MITRE
 
-Credential Access.
+**T1110 — Brute Force**
+
+The detection identifies repeated authentication failures that may indicate brute-force behavior.
+
+In this lab, the investigated events were assessed as benign/system-generated activity, so no brute-force attack was confirmed.
 
 ## Validation
 
