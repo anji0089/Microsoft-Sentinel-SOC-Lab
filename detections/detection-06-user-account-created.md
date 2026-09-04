@@ -19,3 +19,13 @@ A temporary `SentinelTest` account was created for the lab. Event 4720 identifie
 ## Verdict
 
 Benign authorized test. The temporary account was removed after testing.
+
+## Analyst Lesson
+
+New Windows account creation should be investigated because attackers may create accounts to maintain access to a compromised system.
+
+An analyst should review the new account name, account type, initiating user, timing, group membership, and related authentication or privilege events.
+
+In this lab, the account was intentionally created for detection validation and was removed after testing.
+
+
