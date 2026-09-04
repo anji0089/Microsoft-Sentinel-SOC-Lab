@@ -22,3 +22,17 @@ Controlled PowerShell process-creation tests using `IEX()` and a remote web requ
 ## False-positive analysis
 
 Azure Arc and Acer software generated legitimate PowerShell activity. Testing showed why command-line context and account type matter when tuning a detection.
+
+## Investigation Result
+
+The detection successfully identified controlled PowerShell process-creation events generated during lab validation.
+
+The investigation also identified legitimate PowerShell activity from Azure Arc and Acer software. These events demonstrated that PowerShell command-line context and account type are important when distinguishing suspicious execution from legitimate administrative or software activity.
+
+The controlled PowerShell tests did not contain a malicious payload.
+
+## Analyst Lesson
+
+PowerShell execution alone does not establish malicious activity. An analyst should review the command line, account context, parent process, execution pattern, and surrounding events before determining whether the activity is suspicious.
+
+In this lab, the detection worked as intended while the investigation demonstrated the importance of false-positive analysis.
